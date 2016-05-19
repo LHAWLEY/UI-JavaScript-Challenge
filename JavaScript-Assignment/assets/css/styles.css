@@ -1,0 +1,36 @@
+.cell {
+  width: 40px;
+  height: 40px;
+  float: left;
+  text-align: center;
+  background-color: rgba(238, 228, 218, 0.35);
+  margin: 1px;
+}
+.title {
+  font-size: 60px;
+  text-align: center;
+}
+
+.board {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-left: 35px;
+}
+
+.ship {
+  background-color: red;
+}
+
+.hit {
+  background-color: blue;
+}
+
+.miss {
+  background-color: black;
+}
+.board_title {
+  font-size: 20px;
+  text-align: center;
+}
