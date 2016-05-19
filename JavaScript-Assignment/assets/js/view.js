@@ -1,27 +1,27 @@
 function View(el, model){
-  this.el = el;
+  this.el    = el;
   this.model = model;
 }
 
-View.prototype.template = function(){
+View.prototype.template = function(model){
   var html = '';
 
-  for (var i = 0; i < this.model.board.length; i++){
+  for (var i = 0; i < model.board.length; i++){
     var otherClasses = '';
 
-    if (this.model.board[i] === SHIP && this.model.human) {
-      otherClasses = 'ship'
-    } else if (this.model.board[i] === MISS) {
-      otherClasses = 'miss'
-    } else if (this.model.board[i] === HIT) {
-      otherClasses = 'hit'
+    if (model.board[i] === SHIP && model.human) {
+      otherClasses = 'ship';
+    } else if (model.board[i] === MISS) {
+      otherClasses = 'miss';
+    } else if (model.board[i] === HIT) {
+      otherClasses = 'hit';
     }
 
-    html += '<div class="cell ' + otherClasses + '"></div>'
+    html += '<div class="cell ' + otherClasses + '"></div>';
   }
-  return html
+  return html;
 }
 
 View.prototype.render = function(){
-  this.el.innerHTML = this.template();
+  this.el.innerHTML = this.template(this.model);
 }

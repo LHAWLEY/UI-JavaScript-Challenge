@@ -1,51 +1,13 @@
-.cell {
-  width: 40px;
-  height: 40px;
-  float: left;
-  text-align: center;
-  background-color: #D3D3D3;
-  margin: 1px;
+body {
+  overflow: hidden;
 }
 
 .title {
   font-size: 50px;
   color: #3D3D3D;
   text-align: center;
-  margin: 10px 0px 0px 0px;
-}
-
-.board {
-  width: 200px;
-  height: 200px;
-  background-color: #fff;
-  margin: 0 auto;
-  padding-left: 35px;
-}
-
-.ship {
-  background-color: red;
-}
-
-.hit {
-  background-color: blue;
-}
-
-.miss:after {
-  content: 'X';
-  line-height: 40px;
-  font-family: helvetica, sans-serif;
-  font-size: 24px;
-}
-
-.board_title {
-  font-size: 20px;
-  text-align: center;
-  margin-top: 5px;
-  color: #3D3D3D;
-}
-
-body {
-  overflow: hidden;
+  margin: 0;
+  margin-top: 10px;
 }
 
 .button {
@@ -58,4 +20,37 @@ body {
   display: block;
   text-align: center;
   margin-bottom: 25px;
+}
+
+.board_title {
+  font-size: 20px;
+  text-align: center;
+  margin: 15px 0 5px;
+  color: #3D3D3D;
+}
+
+.board {
+  width: 170px;
+  height: 170px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  float: left;
+  background-color: #D3D3D3;
+  margin: 1px;
+  text-align: center;
+}
+
+.ship { background-color: red  }
+.hit  { background-color: blue }
+
+.miss:after {
+  content: 'X';
+  line-height: 40px;
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
 }

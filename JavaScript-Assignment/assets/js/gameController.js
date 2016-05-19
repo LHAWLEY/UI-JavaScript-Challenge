@@ -1,29 +1,29 @@
 function GameController(userBoard, computerBoard, userView, computerView){
-  this.userBoard = userBoard;
+  this.userBoard     = userBoard;
+  this.userView      = userView;
   this.computerBoard = computerBoard;
-  this.userView = userView;
-  this.computerView = computerView;
+  this.computerView  = computerView;
 }
 
 GameController.prototype.getIndex = function(message) {
-    var input,
-        i = 0;
+  var input,
+      retries = 0;
 
-    do {
-      if (i > 0) {
-        message = 'You already pick that number.  Please pick another between 0 - 15.'
-      }
-      input = prompt(message)
-      if (input > 15) {
-        input = 15
-      } else if (input < 0){
-        input = 0
-      }
-      i++
-    } while (this.computerBoard.hasGuessed(input));
+  do {
+    if (retries > 0) {
+      message = 'You already pick that number.  Please pick another between 0 - 15.';
+    }
+    input = prompt(message)
+    if (input > 15) {
+      input = 15;
+    } else if (input < 0){
+      input = 0;
+    }
+    retries++;
+  } while (this.computerBoard.hasGuessed(input));
 
-    return input
-  }
+  return input;
+}
 
 GameController.prototype.computerGuess = function(){
     var number;
@@ -32,10 +32,10 @@ GameController.prototype.computerGuess = function(){
   }
 
 GameController.prototype.turn = function(model, input, view, message){
-    model.guess(input)
-    view.render()
+    model.guess(input);
+    view.render();
     if (model.over){
-      alert(message)
+      alert(message);
     }
   }
 

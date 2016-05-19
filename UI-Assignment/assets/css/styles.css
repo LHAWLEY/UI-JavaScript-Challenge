@@ -1,25 +1,10 @@
-td {
-  height: 200px;
-}
-
-tr td:first-child {
-  font-weight: bold;
-  font-size: 24px;
-  width: 70%;
-  text-align: justify;
-  padding-right: 80px;
+body {
+  margin: 0 80px;
+  color: #444;
   font-family: 'Libre Baskerville', serif;
 }
 
-tr td:last-child {
-  font-weight: bold;
-  font-size: 18px;
-  width: 70%;
-  text-align: center;
-  font-family: 'Libre Baskerville', serif;
-}
-
-thead tr th {
+.column-header {
   font-weight: bold;
   font-size: 28px;
   border-bottom: 1px solid black;
@@ -27,7 +12,19 @@ thead tr th {
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  margin: 0 80px 0px 80px;
-  color: #444;
+td {
+  height: 200px;
+  font-weight: bold;
+  /*width: 70%;  investigate */
+}
+
+tr td:first-child {
+  font-size: 24px;
+  text-align: justify;
+  padding-right: 80px;
+}
+
+tr td:last-child {
+  font-size: 18px;
+  text-align: center;
 }

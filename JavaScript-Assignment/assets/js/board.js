@@ -6,7 +6,7 @@ const NULL = 0,
 function Board(isHuman){
   this.board = this.getDefaultBoard();
   this.human = isHuman;
-  this.over = false;
+  this.over  = false;
 }
 
 Board.prototype.getDefaultBoard = function(){
