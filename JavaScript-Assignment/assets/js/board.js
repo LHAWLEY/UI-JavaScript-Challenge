@@ -19,12 +19,12 @@ Board.prototype.getDefaultBoard = function(){
 }
 
 Board.prototype.placeShip = function(index){
-  this.board[index] = SHIP
+  this.board[index] = SHIP;
 }
 
-// another method, hasGuessed(index) {
-// if value at given index is ship or null -> false else true
-//}
+Board.prototype.hasGuessed = function(index){
+  return !(this.board[index] === SHIP || this.board[index] === NULL);
+}
 
 Board.prototype.guess = function(index){
   if (this.board[index] === SHIP) {
@@ -34,10 +34,3 @@ Board.prototype.guess = function(index){
     this.board[index] = MISS;
   }
 }
-
-
-
-
-
-
-

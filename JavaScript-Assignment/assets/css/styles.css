@@ -3,12 +3,15 @@
   height: 40px;
   float: left;
   text-align: center;
-  background-color: rgba(238, 228, 218, 0.35);
+  background-color: #D3D3D3;
   margin: 1px;
 }
+
 .title {
-  font-size: 60px;
+  font-size: 50px;
+  color: #3D3D3D;
   text-align: center;
+  margin: 10px 0px 0px 0px;
 }
 
 .board {
@@ -27,10 +30,32 @@
   background-color: blue;
 }
 
-.miss {
-  background-color: black;
+.miss:after {
+  content: 'X';
+  line-height: 40px;
+  font-family: helvetica, sans-serif;
+  font-size: 24px;
 }
+
 .board_title {
   font-size: 20px;
   text-align: center;
+  margin-top: 5px;
+  color: #3D3D3D;
+}
+
+body {
+  overflow: hidden;
+}
+
+.button {
+  width: 100px;
+  border-radius: 5px;
+  color: #666;
+  background-color: #eee;
+  text-decoration: none;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  margin-bottom: 25px;
 }
